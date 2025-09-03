@@ -1,36 +1,39 @@
-# ETL-Snowflake-Pipeline
+# ETL Snowflake Pipeline
 
-## Project Overview
-This project implements an **ETL pipeline** that consolidates and transforms purchasing and supplier data into a centralized Snowflake data warehouse.  
-By automating the ingestion and processing of 40+ purchase order files and supplier invoices, the pipeline creates a **single source of truth** for procurement analysis and financial reporting.
+## Project Overview  
+This project implements an **ETL (Extract, Transform, Load) pipeline** that integrates multiple raw datasets into a centralized **Snowflake data warehouse**.  
+Data sources include purchase order CSV files, supplier transaction XML, a PostgreSQL schema, and U.S. Census ZIP code geography data.  
 
----
-
-## Project Goals
-- Design and deploy a **reliable ETL pipeline** for purchase orders and invoices.  
-- Automate repetitive data ingestion tasks using Python.    
-- Deliver a **structured warehouse schema** to support business reporting.  
+The pipeline automates ingestion, applies transformations, and produces **clean, analytics-ready tables** that support procurement and supplier reporting.  
 
 ---
 
-## Key Outcomes
-- **Automated Data Ingestion**: Loaded 40+ CSV purchase files and supplier invoices into Snowflake.  
-- **Data Transformation**: Standardized formats, created calculated fields (e.g., total purchase order value), and validated records.  
-- **Integrated Dataset**: Joined purchases with supplier invoices to support reconciliation and reporting.  
-- **Centralized Warehouse**: Delivered a scalable Snowflake schema ready for analytics.  
+## Goals Achieved  
+- Consolidated 40+ purchase order CSV files into structured Snowflake tables  
+- Parsed supplier transaction data from XML format  
+- Integrated relational schema from PostgreSQL dump  
+- Enriched records with U.S. Census ZIP code geography  
+- Created calculated fields such as purchase order totals and supplier-level spend  
+- Delivered a scalable Snowflake schema supporting downstream analytics  
 
 ---
 
-## Tech Stack
-- **Python** → File ingestion, Snowflake connector, automation  
-- **Snowflake** → Data warehouse for staging, transformation, and storage  
-- **SQL** → Joins, aggregations, and calculated fields    
+## Outcomes  
+- **Unified dataset** combining purchase orders, invoices, and supplier transactions  
+- **Automated ingestion** reducing manual data processing  
+- **Standardized transformations** ensuring data quality and consistency  
+- **Analytics-ready warehouse** powering procurement and financial reporting  
 
 ---
 
-## Repository Structure
-- `notebooks/ETL_Project_Group_2_9.ipynb` → Jupyter notebook with pipeline code and queries.  
-- `slides/ETL.pptm` → Presentation summarizing methodology and results.  
-- `requirements.txt` → Python dependencies.  
-- `LICENSE` → MIT License for open use.   
+## Tech Stack  
+- **Python** → Automation, Snowflake connector, XML/CSV ingestion  
+- **Snowflake** → Cloud data warehouse for storage, transformations, and queries  
+- **SQL** → Joins, aggregations, and calculated fields   
 
+---
+
+## Repository Contents
+- [Data](https://github.com/siddharthamysore27-creator/ETL-Snowflake-Pipeline/tree/main/Data) → Raw datasets (CSV purchase orders, supplier transactions XML, PostgreSQL schema, ZIP code geography)  
+- [ETL_Project.ipynb](https://github.com/siddharthamysore27-creator/ETL-Snowflake-Pipeline/blob/main/ETL_Project.ipynb) → Jupyter notebook with ETL pipeline implementation  
+- [LICENSE](https://github.com/siddharthamysore27-creator/ETL-Snowflake-Pipeline/blob/main/LICENSE) → MIT License for open use 
